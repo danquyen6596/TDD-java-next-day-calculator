@@ -8,111 +8,57 @@ class NextDayCalculatorTest {
 
     @Test
     void nextDay1() {
-        int day = 1;
-        int month = 1;
-        int year = 2018;
+        String s = "01/01/2018";
 
-        int expected_day = 2;
-        int expected_month = 1;
-        int expected_year = 2018;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "02/01/2018";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 
     @Test
     void nextDay2() {
-        int day = 31;
-        int month = 1;
-        int year = 2018;
+        String s = "31/01/2018";
 
-        int expected_day = 1;
-        int expected_month = 2;
-        int expected_year = 2018;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "01/02/2018";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 
 
     @Test
     void nextDay3() {
-        int day = 30;
-        int month = 4;
-        int year = 2018;
+        String s = "30/04/2018";
 
-        int expected_day = 1;
-        int expected_month = 5;
-        int expected_year = 2018;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "01/05/2018";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 
 
     @Test
     void nextDay4() {
-        int day = 28;
-        int month = 2;
-        int year = 2018;
+        String s = "28/02/2018";
 
-        int expected_day = 1;
-        int expected_month = 3;
-        int expected_year = 2018;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "01/03/2018";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 
     @Test
     void nextDay5() {
-        int day = 29;
-        int month = 2;
-        int year = 2020;
+        String s = "29/02/2020";
 
-        int expected_day = 1;
-        int expected_month = 3;
-        int expected_year = 2020;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "01/03/2020";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 
     @Test
     void nextDay6() {
-        int day = 31;
-        int month = 12;
-        int year = 2018;
+        String s = "31/12/2018";
 
-        int expected_day = 1;
-        int expected_month = 1;
-        int expected_year = 2019;
-
-        int resultDay = NextDayCalculator.nextDay(day, month, year);
-        int resultMonth = NextDayCalculator.nextMonth(day, month, year);
-        int resultYear = NextDayCalculator.nextYear(day, month, year);
-        assertEquals(resultDay, expected_day);
-        assertEquals(resultMonth, expected_month);
-        assertEquals(resultYear, expected_year);
+        String expected = "01/01/2019";
+        String result = NextDayCalculator.nextDay(s);
+        assertEquals(expected, result);
     }
 }
